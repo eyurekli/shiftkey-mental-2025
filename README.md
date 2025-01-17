@@ -2,3 +2,4 @@
 
 ## We are awesome
 - Ekin
+- Wes
