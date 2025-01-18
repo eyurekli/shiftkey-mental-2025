@@ -15,7 +15,7 @@ header {
 
 @media (prefers-color-scheme: light) { 
     header {
-        background-color: #4C3177;
+        background-color: #F7F99B;
         color: black;
     }
 }
