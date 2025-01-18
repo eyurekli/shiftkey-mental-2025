@@ -57,7 +57,7 @@ button:focus-visible {
 
   a {
     font-weight: 500;
-    color: #F9CE9B;
+    color: #4b2e0a;
     text-decoration: inherit;
   }
   a:hover {
@@ -65,7 +65,7 @@ button:focus-visible {
     text-decoration: underline;
   }
   button {
-    background-color: #ffffff;
+    background-color: #3e40a2;
   }
 
   
