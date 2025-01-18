@@ -49,16 +49,26 @@ button:focus-visible {
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
     color: #4C3177;
     background-color: #F9CE9B;
   }
+
+  a {
+    font-weight: 500;
+    color: #F9CE9B;
+    text-decoration: inherit;
+  }
   a:hover {
-    color: #4C3177;
+    color: black;
+    text-decoration: underline;
   }
   button {
-    background-color: #F9CE9B;
+    background-color: #4C3177;
   }
+
+  
 }
 
 * {

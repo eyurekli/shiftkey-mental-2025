@@ -7,3 +7,16 @@
     max-width: 300px;
     padding: 1em;
 }
+
+@media (prefers-color-scheme: light) { 
+    #resources
+    {
+        background-color: #4C3177;
+        color: black;
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        padding: 1em;
+    }
+}
