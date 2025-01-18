@@ -3,3 +3,6 @@
 ## We are awesome
 - Ekin
 - Wes
+- Nia
+- Shaun
+- Silvio
