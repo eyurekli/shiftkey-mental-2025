@@ -3,6 +3,20 @@
   margin: 0 auto;
 }
 
+header {
+  position: sticky;
+  top: 0; /* Keep it at the top when scrolling */
+  z-index: 3000; /* Ensure the header stays on top of everything else */
+}
+#resources {
+  position: absolute; /* Fix the position to the top-left corner */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: auto; /* Ensure it doesn't stretch */
+  z-index: 2000; /* Keep it above other elements */
+  padding: 10px; /* Optional, for spacing within the element */
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -13,13 +27,3 @@
   padding: 1em;
 }
 
-#resources
-{
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1f2753;
-  z-index: 2000; /* Keeps the header above other content */
-  padding: 10px 0; /* Adjust padding as needed */
-}
