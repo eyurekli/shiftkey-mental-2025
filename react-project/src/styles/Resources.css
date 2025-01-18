@@ -1,0 +1,9 @@
+#resources
+{
+    background-color: black;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 1em;
+}

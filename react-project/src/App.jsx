@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
+import AudioVisualizer from './components/AudioVisualizer';
+import Resources from './components/Resources';
 
 function App() {
 
   return (
     <>
-     <Header/>  
-      <div className="center">
+      <Header/>  
 
-        <h3><a href="https://www.github.com" target="_blank">About Us</a></h3>
+      <Resources/>
+      
+      <div className="center">
         <button>Try Now</button>
-        <h3>Resources</h3>
+        <AudioVisualizer></AudioVisualizer>
 
       </div>
     </>

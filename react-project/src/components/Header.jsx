@@ -6,7 +6,10 @@ export default function Header()
         <>
             <header>
                 <h1>Calmora</h1>
-                <button id="mode-switch">Dark Mode</button>
+                <div id="links">
+                    <h3><a href="https://www.github.com" target="_blank">About Us</a></h3>
+                    <button id="mode-switch">Dark Mode</button>
+                </div>
             </header>
         </>
     )
