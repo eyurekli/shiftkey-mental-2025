@@ -4,10 +4,12 @@
   height: 100%;
 }
 
-body{
+html,body{
   overflow-x: hidden;
   overflow-y: hidden;
+ 
 }
+
 
 #resources {
   top: 0; /* Align to the top */
@@ -25,7 +27,7 @@ body{
   justify-content: center;
   align-items: center;
   gap: 15px; 
-  height: 80vh;
+  height: 78vh;
 }
 
 

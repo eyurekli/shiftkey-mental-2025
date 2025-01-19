@@ -6,9 +6,15 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#phrase{
+    margin-top: 5px;
+    margin-right: 100px;
+}
+
 #links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
 }
+

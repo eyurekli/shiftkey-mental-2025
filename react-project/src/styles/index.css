@@ -58,3 +58,13 @@ button:focus-visible {
 html {
   height: 120vh;
 }
+
+footer{
+  background-color: black;
+  text-align: center;
+  padding-bottom: 1em; /* Adjusts the top and bottom padding */
+  padding-top: 5px;
+  position: relative;
+  bottom: 0;
+  width: 100%;  /* Ensure footer takes up full width */
+}
