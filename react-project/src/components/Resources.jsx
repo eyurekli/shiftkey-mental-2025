@@ -26,9 +26,9 @@ export default function Resources() {
     },
     {
       id: 3,
-      text: "Study Focus Strategies",
-      blurb: "Provides free online programs to help students develop better focus, time management, and study habits.",
-      link: "https://mylearningcoach.ca/service-areas/nova-scotia/",
+      text: "Self-Help Strategies",
+      blurb: "A self-help strategy PDF offering practical tips and techniques for understanding and managing anxiety.",
+      link: "https://www.anxietycanada.com/sites/default/files/adult_hmsocial.pdf",
     },
   ];
 

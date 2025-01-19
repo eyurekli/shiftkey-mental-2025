@@ -12,7 +12,6 @@ export default function Checklist() {
     { id: 4, text: "Offer a compliment to someone", checked: false },
     { id: 5, text: "Introduce yourself to a new person", checked: false },
     { id: 6, text: "Join a group activity or event", checked: false },
-    
   ]);
 
   const [points, setPoints] = useState(0); // Total points
@@ -49,8 +48,8 @@ export default function Checklist() {
 
   return (
     <nav id="checklist">
-      {/* Confetti Effect */}
-      {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} />}
+      {/* Confetti Effect with gravity adjustment */}
+      {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} gravity={0.05} />}
 
       <h3>Checklist</h3>
       <ul>
