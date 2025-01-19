@@ -20,7 +20,7 @@
 
 .bar {
   background-color: rgb(38, 38, 38);
-  width: 20px;
+  width: 8px;
   margin: 0 2px;
   transition: height 0.05s ease-in-out;
   height: 0%; /* Start with zero height */

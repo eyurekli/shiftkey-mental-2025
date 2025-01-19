@@ -8,7 +8,7 @@ export default function AudioVisualizer() {
     const intervalId = setInterval(() => {
       barsRef.current.forEach((bar) => {
         const randomHeight = Math.random();
-        console.log(randomHeight); // Log random height for debugging
+        // console.log(randomHeight); // Log random height for debugging
         bar.style.height = `${randomHeight * 100}%`; // Set random height
       });
     }, 100);
@@ -18,7 +18,7 @@ export default function AudioVisualizer() {
 
   return (
     <div className="visualizer">
-      {Array.from({ length: 23 }).map((_, index) => (
+      {Array.from({ length: 30 }).map((_, index) => (
         <div
           key={index}
           className="bar"

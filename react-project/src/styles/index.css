@@ -14,23 +14,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-footer{
-  background-color: black;
-}
-
 a {
   font-weight: 500;
-  color: #F7f99b;
+  color: #F9CE9B;
   text-decoration: inherit;
 }
 a:hover {
-  color: #F9CE9B;
+  color: #F7F99B;
 }
 
 
@@ -65,3 +55,6 @@ button:focus-visible {
   padding: 0;
 }
 
+html {
+  height: 120vh;
+}

@@ -6,8 +6,48 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+    min-width: 250px;
     max-width: 300px;
     padding: 1em;
     z-index: 2000; /* Ensure it stays above other elements */
-  }
-  
+}
+
+#checklist ul {
+    list-style: none; /* Removes the dots from list items */
+    padding: 0; /* Optional: Removes left padding from the list */
+    margin: 0; /* Optional: Removes default margin */
+}
+
+#checklist li {
+    margin: 0.5em 0; /* Add spacing between items, optional */
+}
+
+
+/* Progress Container */
+.progress-container {
+  margin-top: 1em;
+  color: white;
+  text-align: center;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #333; /* Background color for the bar */
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0.5em;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: green; /* Green progress bar */
+  width: 0; /* Initial width */
+  transition: width 0.5s ease; /* Smooth transition */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.item input{
+  margin: 5px;
+}

@@ -6,9 +6,9 @@ export default function Resources()
         <>
          <nav id="resources">
             <h3>Resources</h3>
-            <p>Resource 1</p>
-            <p>Guide 2</p>
-            <p>Lesson 3</p>
+            <p>Exercises with Friends</p>
+            <p>Study Focus Strategies</p>
+            <p>Meditation Techniques</p>
          </nav>
         </>
     )

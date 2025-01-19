@@ -1,15 +1,9 @@
-html{
-  overflow-y: hidden;
-}
+
 #root {
   margin: 0 auto;
   height: 100%;
 }
 
-header {
-  top: 0; /* Keep it at the top when scrolling */
-  z-index: 3000; /* Ensure the header stays on top of everything else */
-}
 #resources {
   top: 0; /* Align to the top */
   left: 0; /* Align to the left */
@@ -20,14 +14,13 @@ header {
 
 
 .center {
-  position: relative;
-  top: -140px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   gap: 15px; 
+  height: 80vh;
 }
 
 

@@ -29,7 +29,7 @@ function App() {
       </div>
       
       <div className="center">
-        <button class = "button">Try Now</button>
+        <button className="button">Try Now</button>
         <div id = "visualizer-bar">
         <AudioVisualizer />
         </div>
