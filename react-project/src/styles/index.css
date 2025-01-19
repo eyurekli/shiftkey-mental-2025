@@ -62,9 +62,9 @@ html {
 footer {
   background-color: black;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 2em; /* More bottom padding */
-  margin-top: -.5em; /* Move the footer up a bit */
+  padding-top: 10px;
+  padding-bottom: 3em; /* More bottom padding */
+   /* Move the footer up a bit */
   position: relative; /* Ensure the footer stays at the bottom */
   width: 100%; /* Ensure footer takes up full width */
 }
