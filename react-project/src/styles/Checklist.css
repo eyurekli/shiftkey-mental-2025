@@ -1,9 +1,13 @@
-#checklist
-{
+#checklist {
+    position: absolute; /* Ensures it stays in place even when scrolling */
+    top: 1em; /* Distance from the top */
+    right: 1em; /* Distance from the right */
     background-color: black;
     margin: 1em;
     display: flex;
     flex-direction: column;
     max-width: 300px;
     padding: 1em;
+    width: auto; /* Ensure it doesn't stretch */
+    z-index: 2000; /* Keep it above other elements */
 }
