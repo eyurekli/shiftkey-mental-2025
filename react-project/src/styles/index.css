@@ -14,13 +14,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer{
+  background-color: black;
+}
+
 a {
   font-weight: 500;
-  color: #F9CE9B;
+  color: #F7f99b;
   text-decoration: inherit;
 }
 a:hover {
-  color: #F7F99B;
+  color: #F9CE9B;
 }
 
 

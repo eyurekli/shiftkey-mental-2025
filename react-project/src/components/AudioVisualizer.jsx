@@ -18,7 +18,7 @@ export default function AudioVisualizer() {
 
   return (
     <div className="visualizer">
-      {Array.from({ length: 8 }).map((_, index) => (
+      {Array.from({ length: 23 }).map((_, index) => (
         <div
           key={index}
           className="bar"

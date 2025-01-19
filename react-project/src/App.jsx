@@ -29,9 +29,8 @@ function App() {
       </div>
       
       <div className="center">
-        <button>Try Now</button>
-        <div>
-          <h2>Audio Visualizer</h2>
+        <button class = "button">Try Now</button>
+        <div id = "visualizer-bar">
         <AudioVisualizer />
         </div>
         <div>
@@ -39,6 +38,7 @@ function App() {
           <p>{message}</p>
         </div>
       </div>
+
 
     </>
   );
