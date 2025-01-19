@@ -21,7 +21,7 @@ header {
 
 .center {
   position: relative;
-  top: -140px;
+  top: -50px;
   display: flex;
   flex-direction: column;
   text-align: center;
