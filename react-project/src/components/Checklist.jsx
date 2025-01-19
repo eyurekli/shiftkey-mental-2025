@@ -6,12 +6,13 @@ export default function Checklist() {
   const [showConfetti, setShowConfetti] = useState(false);
 
   const [items, setItems] = useState([
-    { id: 1, text: "Go outside with friends", checked: false },
-    { id: 2, text: "Read a book", checked: false },
-    { id: 3, text: "Complete homework", checked: false },
-    { id: 4, text: "Exercise for 30 minutes", checked: false },
-    { id: 5, text: "Drink 8 glasses of water", checked: false },
-    { id: 6, text: "Meditate for 10 minutes", checked: false },
+    { id: 1, text: "Meditate for 10 minutes", checked: false },
+    { id: 2, text: "Take a walk outside", checked: false },
+    { id: 3, text: "Join a group activity or event", checked: false },
+    { id: 4, text: "Offer a compliment to someone", checked: false },
+    { id: 5, text: "Introduce yourself to a new person", checked: false },
+    { id: 6, text: "Join a discussion in an online group", checked: false },
+    
   ]);
 
   const [points, setPoints] = useState(0); // Total points
