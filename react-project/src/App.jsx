@@ -4,6 +4,7 @@ import AudioVisualizer from './components/AudioVisualizer';
 import Resources from './components/Resources';
 import React, { useState } from 'react';
 import axios from 'axios';
+import Checklist from './components/Checklist';
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
     <>
       <Header />  
       <Resources />
+      <Checklist/>
       
       <div className="center">
         <button>Try Now</button>
