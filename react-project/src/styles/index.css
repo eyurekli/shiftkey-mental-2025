@@ -59,12 +59,13 @@ html {
   height: 120vh;
 }
 
-footer{
+footer {
   background-color: black;
   text-align: center;
-  padding-bottom: 1em; /* Adjusts the top and bottom padding */
   padding-top: 5px;
-  position: relative;
-  bottom: 0;
-  width: 100%;  /* Ensure footer takes up full width */
+  padding-bottom: 2em; /* More bottom padding */
+  margin-top: -.5em; /* Move the footer up a bit */
+  position: relative; /* Ensure the footer stays at the bottom */
+  width: 100%; /* Ensure footer takes up full width */
 }
+
