@@ -28,7 +28,10 @@ function App() {
       
       <div className="center">
         <button>Try Now</button>
+        <div>
+          <h2>Audio Visualizer</h2>
         <AudioVisualizer />
+        </div>
         <div>
           <button onClick={runNotebook}>Run Notebook</button>
           <p>{message}</p>

@@ -1,8 +1,30 @@
-export default function AudioVisualizer()
-{
-    return (
-        <>
-        <img src={"https://png.pngtree.com/png-vector/20230408/ourmid/pngtree-sound-waves-equalizer-audio-radio-signal-music-recording-vector-png-image_6678910.png"}></img>
-        </>
-    )
+import React, { useEffect, useRef } from "react";
+import "../styles/visualizer.css"; // Corrected CSS import path
+
+export default function AudioVisualizer() {
+  const barsRef = useRef([]);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      barsRef.current.forEach((bar) => {
+        const randomHeight = Math.random();
+        console.log(randomHeight); // Log random height for debugging
+        bar.style.height = `${randomHeight * 100}%`; // Set random height
+      });
+    }, 100);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    <div className="visualizer">
+      {Array.from({ length: 8 }).map((_, index) => (
+        <div
+          key={index}
+          className="bar"
+          ref={(el) => (barsRef.current[index] = el)}
+        ></div>
+      ))}
+    </div>
+  );
 }
