@@ -1,6 +1,9 @@
-
+html{
+  overflow-y: hidden;
+}
 #root {
   margin: 0 auto;
+  height: 100%;
 }
 
 header {
@@ -26,12 +29,14 @@ header {
 }
 
 .center {
+  position: relative;
+  top: -140px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  padding: 1em;
+  gap: 15px; 
 }
+
 
