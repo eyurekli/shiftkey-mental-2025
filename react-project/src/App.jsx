@@ -7,18 +7,7 @@ import axios from 'axios';
 import Checklist from './components/Checklist';
 
 function App() {
-  const [message, setMessage] = useState('');
   const [audioUrl, setAudioUrl] = useState('');
-
-  // Function to run the notebook
-  const runNotebook = async () => {
-    try {
-      const response = await axios.get('http://localhost:5000/run_notebook');
-      setMessage(response.data.message);
-    } catch (error) {
-      setMessage('Error running notebook');
-    }
-  };
 
   // Function to fetch the audio file
   const fetchAudio = async () => {
@@ -30,9 +19,9 @@ function App() {
       // Create an object URL for the audio file
       const audioBlob = new Blob([response.data], { type: 'audio/mpeg' });
       const audioUrl = URL.createObjectURL(audioBlob);
-      setAudioUrl(audioUrl);
+      setAudioUrl(audioUrl); // Set the audio URL state to trigger audio playback
     } catch (error) {
-      setMessage('Error fetching audio');
+      console.error('Error fetching audio:', error);
     }
   };
 
@@ -45,18 +34,13 @@ function App() {
       </div>
 
       <div className="center">
-        <button className="button">Try Now</button>
         <div id="visualizer-bar">
           <AudioVisualizer />
         </div>
         <div>
-          <button onClick={runNotebook}>Run Notebook</button>
-          <p>{message}</p>
-        </div>
-        <div>
-          <button onClick={fetchAudio}>Fetch and Play Audio</button>
+          <button onClick={fetchAudio}>Talk Now</button>
           {audioUrl && (
-            <audio controls>
+            <audio controls autoPlay>
               <source src={audioUrl} type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>

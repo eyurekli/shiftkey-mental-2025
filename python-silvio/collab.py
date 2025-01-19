@@ -90,8 +90,6 @@ def get_audio():
     try:
         # Adjust the path to the correct directory
         # Absolute path for content folder
-        os.chdir("..")  # Go one level up from Kokoro-82M
-
 
         mp3_file_path = os.path.join(os.getcwd(), "content", "output.mp3")
         print(f"Looking for the audio file at: {mp3_file_path}")  # Debugging line
@@ -125,4 +123,5 @@ def generate_audio():
 
 # Start the Flask app
 if __name__ == "__main__":
+    os.chdir("..")  # Go one level up from Kokoro-82M
     app.run(port=5000)
