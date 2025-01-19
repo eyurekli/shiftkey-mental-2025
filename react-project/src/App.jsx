@@ -12,44 +12,56 @@ function App() {
   const [recordedAudio, setRecordedAudio] = useState(null);
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
-  const [audioBlob, setAudioBlob] = useState(null); // New state to store the audioBlob
-
+  const [audioBlob, setAudioBlob] = useState(null);
+  const [newMessage, setNewMessage] = useState(false);
+  const [startTransition, setStartTransition] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false); // State to track if processing is happening
+  const audioRef = useRef(null);
 
   const sendAudioToServer = async () => {
     if (audioBlob) {
+      setIsProcessing(true); // Set processing state to true
+
       const formData = new FormData();
       formData.append('audio', audioBlob, 'recordedAudio.wav');
       
       try {
-        const response = await axios.post('http://localhost:5000/upload', formData, {
+        await axios.post('http://localhost:5000/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         });
-        console.log('Audio uploaded successfully:', response.data);
+        console.log('Audio uploaded successfully');
       } catch (error) {
         console.error('Error uploading audio:', error);
       }
+
+      // Clear previous audio state and fetch new audio
+      setAudioUrl('');
+      setRecordedAudio(null);
+      await fetchAudio();
+
+      setIsProcessing(false); // Set processing state to false after fetching audio
     }
   };
 
-  
-  // Function to fetch the audio file (existing functionality)
   const fetchAudio = async () => {
     try {
       const response = await axios.get('http://localhost:5000/audio', {
-        responseType: 'blob', // Ensure the response is treated as a binary file
+        responseType: 'blob',
       });
 
       const audioBlob = new Blob([response.data], { type: 'audio/mpeg' });
       const audioUrl = URL.createObjectURL(audioBlob);
-      setAudioUrl(audioUrl); // Set the audio URL state to trigger audio playback
+      setAudioUrl(audioUrl);
+
+      setNewMessage(true);
+      setTimeout(() => setNewMessage(false), 5000);
     } catch (error) {
       console.error('Error fetching audio:', error);
     }
   };
 
-  // Start recording
   const startRecording = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -62,22 +74,33 @@ function App() {
 
       mediaRecorderRef.current.onstop = () => {
         const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/wav' });
-        setAudioBlob(audioBlob); // Save the audioBlob in the state
+        setAudioBlob(audioBlob);
         const audioUrl = URL.createObjectURL(audioBlob);
-        setRecordedAudio(audioUrl); // Set the recorded audio URL for playback
+        setRecordedAudio(audioUrl);
       };
 
       mediaRecorderRef.current.start();
-      setIsRecording(true); // Update the recording state
+      setIsRecording(true);
     } catch (error) {
       console.error('Error starting the recording:', error);
     }
   };
 
-  // Stop recording
   const stopRecording = () => {
     mediaRecorderRef.current.stop();
-    setIsRecording(false); // Update the recording state
+    setIsRecording(false);
+  };
+
+  const handleAudioPlay = () => {
+    setStartTransition(true);
+  };
+
+  const handleAudioPause = () => {
+    setStartTransition(false);
+  };
+
+  const handleAudioEnded = () => {
+    setStartTransition(false);
   };
 
   return (
@@ -90,13 +113,10 @@ function App() {
 
       <div className="center">
         <div id="visualizer-bar">
-          <AudioVisualizer />
+          <AudioVisualizer startTransition={startTransition} />
         </div>
 
         <div>
-          {/* Button to trigger fetching pre-recorded audio */}
-          <button onClick={fetchAudio}>Talk Now</button>
-
           {/* Record buttons */}
           {!isRecording ? (
             <button onClick={startRecording}>Start Recording</button>
@@ -104,14 +124,34 @@ function App() {
             <button onClick={stopRecording}>Stop Recording</button>
           )}
 
-          <button onClick={sendAudioToServer}>Send Audio to Server</button>
+          <button onClick={sendAudioToServer}>Send Message</button>
 
+          {/* Display "Processing..." message */}
+          {isProcessing && (
+            <div style={{ color: 'white', fontSize: '18px', fontWeight: 'bold' }}>
+              Processing...
+            </div>
+          )}
+
+          {/* Display "New Message!" alert */}
+          {newMessage && (
+            <div style={{ color: 'white', fontSize: '18px', fontWeight: 'bold' }}>
+              New Message!
+            </div>
+          )}
 
           {/* Playback the recorded audio */}
           {recordedAudio && (
             <div>
               <h3>Recorded Audio:</h3>
-              <audio controls autoPlay>
+              <audio
+                ref={audioRef}
+                controls
+                autoPlay
+                onPlay={handleAudioPlay}
+                onPause={handleAudioPause}
+                onEnded={handleAudioEnded}
+              >
                 <source src={recordedAudio} type="audio/wav" />
                 Your browser does not support the audio element.
               </audio>
@@ -122,7 +162,14 @@ function App() {
           {audioUrl && (
             <div>
               <h3>Fetched Audio:</h3>
-              <audio controls autoPlay>
+              <audio
+                ref={audioRef}
+                controls
+                autoPlay
+                onPlay={handleAudioPlay}
+                onPause={handleAudioPause}
+                onEnded={handleAudioEnded}
+              >
                 <source src={audioUrl} type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>

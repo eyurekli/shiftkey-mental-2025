@@ -90,6 +90,8 @@ def upload_audio():
     # After saving the audio file, call the gen_ai function
     gen_ai()
     os.chdir("..")
+
+    
     
     return "File uploaded successfully", 200
 
@@ -210,7 +212,7 @@ def gen_ai():
         file.write(text)
 
     prompt = """This message contains a brief description of an individual experiencing a mental health issue and requesting assistance.
-    Given the user's description, respond in a conversational and concise manner, offering support and assistance in a compassionate way. INCLUDE NO ASTERISKS OR SPECIAL CHARACTERS IN THE RESPONSE. Keep this to no more than 8 sentences.
+    Given the user's description, respond in a conversational and concise manner, offering support and assistance in a compassionate way. INCLUDE NO ASTERISKS OR SPECIAL CHARACTERS IN THE RESPONSE. Keep this to no more than 4 sentences.
     """
 
     with open(text_file, "r") as file:
