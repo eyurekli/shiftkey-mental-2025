@@ -16,6 +16,14 @@ header {
   padding: 10px; /* Optional, for spacing within the element */
 }
 
+#checklist {
+  top: 0; /* Align to the top */
+  right: 0; /* Align to the left */
+  width: auto; /* Ensure it doesn't stretch */
+  z-index: 2000; /* Keep it above other elements */
+  padding: 10px; /* Optional, for spacing within the element */
+}
+
 .center {
   display: flex;
   flex-direction: column;

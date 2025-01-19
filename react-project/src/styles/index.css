@@ -48,28 +48,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
 
-  :root {
-    color: #4C3177;
-    background-color: #F9CE9B;
-  }
-
-  a {
-    font-weight: 500;
-    color: #4b2e0a;
-    text-decoration: inherit;
-  }
-  a:hover {
-    color: black;
-    text-decoration: underline;
-  }
-  button {
-    background-color: #3e40a2;
-  }
-
-  
-}
 
 * {
   margin: 0;

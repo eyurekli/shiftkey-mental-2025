@@ -11,10 +11,3 @@ header {
     align-items: center;
     gap: 25px;
 }
-
-@media (prefers-color-scheme: light) { 
-    header {
-        background-color: #F7F99B;
-        color: black;
-    }
-}
