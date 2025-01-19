@@ -9,6 +9,13 @@
 # # !pip install pydub
 # # pip install ipython
 
+from pydub import AudioSegment
+from pydub.playback import play
+
+AudioSegment.converter = "C:/ffmpeg/bin/ffmpeg.exe"
+
+
+
 from flask import Flask
 app = Flask(__name__)
 
