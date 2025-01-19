@@ -4,7 +4,6 @@
 }
 
 header {
-  position: sticky;
   top: 0; /* Keep it at the top when scrolling */
   z-index: 3000; /* Ensure the header stays on top of everything else */
 }
@@ -16,14 +15,6 @@ header {
   padding: 10px; /* Optional, for spacing within the element */
 }
 
-#checklist {
-  top: 0; /* Align to the top */
-  right: 0; /* Align to the right */
-  width: auto; /* Ensure it doesn't stretch */
-  z-index: 2000; /* Keep it above other elements */
-  padding: 10px; /* Optional, for spacing within the element */
-  background-color: red;
-}
 
 .center {
   display: flex;
