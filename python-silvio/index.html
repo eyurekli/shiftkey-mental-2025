@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 File Echo</title>
+</head>
+<body>
+    <h1>Upload an MP3 File</h1>
+    <form id="uploadForm">
+        <input type="file" id="fileInput" accept="audio/mpeg" required>
+        <button type="submit">Upload and Receive</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById('uploadForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent page reload
+            
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'An error occurred');
+                }
+
+                // Create a download link for the returned file
+                const blob = await response.blob();
+                const downloadUrl = URL.createObjectURL(blob);
+                resultDiv.innerHTML = `<a href="${downloadUrl}" download="${file.name}">Download File</a>`;
+            } catch (error) {
+                console.error(error);
+                resultDiv.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

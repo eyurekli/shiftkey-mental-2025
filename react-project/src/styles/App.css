@@ -4,6 +4,11 @@
   height: 100%;
 }
 
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 #resources {
   top: 0; /* Align to the top */
   left: 0; /* Align to the left */

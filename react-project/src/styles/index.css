@@ -2,9 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  height: 100%;
   color-scheme: dark;
-  color: #F7F99B;
+  color: #ffffff;
   background-color: #4C3177;
 
   
@@ -16,11 +16,11 @@
 
 a {
   font-weight: 500;
-  color: #F9CE9B;
+  color: #ffffff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #F7F99B;
+  color: #c6aad6;
 }
 
 
@@ -41,7 +41,7 @@ button {
   transition: border-color 0.25s;
 } 
 button:hover {
-  border-color: #F9CE9B;
+  border-color: #c6aad6;
 }
 button:focus,
 button:focus-visible {

@@ -1,13 +1,44 @@
 #resources {
-    position: absolute; /* Positioned relative to the parent container */
-    top: calc(100% + 1em); /* Start below the header with spacing */
-    left: 1em; /* Align to the left */
-    background-color: black;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-    z-index: 2000; /* Ensure it stays above other elements */
-    min-width: 150px;
-    max-width: 300px;
-  }
+  position: absolute;
+  top: calc(100% + 1em);
+  left: 1em;
+  background-color: black;
+  color: white; /* Ensure text is visible */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  z-index: 2000;
+  min-width: 150px;
+  max-width: 300px;
+}
+
+.resource-item {
+  margin: 0.5em 0;
+  cursor: pointer; /* Indicate the element is clickable */
+}
+
+.resource-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resource-header:hover {
+  color: lightgray; /* Highlight on hover */
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(90deg); /* Rotate the arrow when the blurb is visible */
+}
+
+.blurb {
+  margin: 0.5em 0 0 1em;
+  font-size: 0.9em;
+  color: lightgray; /* Make the blurb distinct */
+  line-height: 1.4;
+}
