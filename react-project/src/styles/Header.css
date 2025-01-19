@@ -2,8 +2,12 @@ header {
     background-color: black;
     padding: 1em;
     display: flex;
-    justify-content: space-between;
-    position: sticky;
+    justify-content: space-between;    
+    position: relative; /* Makes the header the parent context */
+    top: 0;
+    z-index: 3000; /* Ensures it stays above everything else */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
 }
 
 #links {

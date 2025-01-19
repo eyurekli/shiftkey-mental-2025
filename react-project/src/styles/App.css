@@ -3,19 +3,6 @@
   margin: 0 auto;
 }
 
-header {
-  top: 0; /* Keep it at the top when scrolling */
-  z-index: 3000; /* Ensure the header stays on top of everything else */
-}
-#resources {
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  width: auto; /* Ensure it doesn't stretch */
-  z-index: 2000; /* Keep it above other elements */
-  padding: 10px; /* Optional, for spacing within the element */
-}
-
-
 .center {
   display: flex;
   flex-direction: column;
@@ -25,4 +12,3 @@ header {
   gap: 25px;
   padding: 1em;
 }
-

@@ -1,13 +1,13 @@
 #checklist {
-    position: absolute; /* Ensures it stays in place even when scrolling */
-    top: 1em; /* Distance from the top */
-    right: 1em; /* Distance from the right */
+    position: absolute; /* Positioned relative to the parent container */
+    top: calc(100% + 1em); /* Start below the header with spacing */
+    right: 1em; /* Align to the right */
     background-color: black;
-    margin: 1em;
+    margin: 0;
     display: flex;
     flex-direction: column;
     max-width: 300px;
     padding: 1em;
-    width: auto; /* Ensure it doesn't stretch */
-    z-index: 2000; /* Keep it above other elements */
-}
+    z-index: 2000; /* Ensure it stays above other elements */
+  }
+  

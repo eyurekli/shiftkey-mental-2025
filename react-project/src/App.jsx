@@ -22,9 +22,11 @@ function App() {
 
   return (
     <>
-      <Header />  
-      <Resources />
-      <Checklist/>
+      <div style={{ position: "relative" }}>
+        <Header />  
+        <Resources />
+        <Checklist />
+      </div>
       
       <div className="center">
         <button>Try Now</button>

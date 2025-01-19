@@ -1,9 +1,11 @@
-#resources
-{
+#resources {
+    position: absolute; /* Positioned relative to the parent container */
+    top: calc(100% + 1em); /* Start below the header with spacing */
+    left: 1em; /* Align to the left */
     background-color: black;
-    margin: 1em;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    max-width: 300px;
     padding: 1em;
-}
+    z-index: 2000; /* Ensure it stays above other elements */
+  }
