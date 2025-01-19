@@ -9,7 +9,7 @@ export default function AudioVisualizer() {
       barsRef.current.forEach((bar) => {
         const randomHeight = Math.random();
         // console.log(randomHeight); // Log random height for debugging
-        bar.style.height = `${randomHeight * 100}%`; // Set random height
+        bar.style.height = `${randomHeight * 60}%`; // Set random height
       });
     }, 100);
 
