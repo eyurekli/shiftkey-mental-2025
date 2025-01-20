@@ -16,8 +16,12 @@ from IPython.display import display, Javascript, HTML
 import google.generativeai as genai
 # Used to securely store your API key
 
+from dotenv import load_dotenv
 
-genai.configure(api_key='AIzaSyCRBqXqcVIn4DBowSXiYYTEk6dk_X-nTsM')
+load_dotenv()
+api_key = os.getenv('GENAI_API_KEY')
+genai.configure(api_key=api_key)
+
 model = genai.GenerativeModel(
     'gemini-1.5-flash',
     generation_config=genai.GenerationConfig(
