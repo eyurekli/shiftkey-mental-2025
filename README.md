@@ -10,9 +10,9 @@ This repository lacks the Kokoro-82M Model, due to it's large size.
 ## Presentation Link
 https://docs.google.com/presentation/d/1h3-J7XP6VjZQ1vxj3i6qkJU_03-BcNZkn96muNLdriw/edit?usp=sharing
 
-## We are awesome
-- Ekin
-- Wes
-- Nia
+## Contributors
+- Ekin Yurekli
+- Wesley Berg
+- Nia Xidos
 - Silvio
-- Shaun
+- Shaun Ramsey
