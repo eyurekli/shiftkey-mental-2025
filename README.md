@@ -1,4 +1,5 @@
-# ShiftKey GenAI Mental Health Hackathon 2025
+# ConQuest by Team 5hawks
+## ShiftKey GenAI Mental Health Hackathon 2025
 
 This repository lacks the Kokoro-82M Model, due to it's large size.
 
