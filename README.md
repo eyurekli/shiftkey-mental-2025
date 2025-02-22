@@ -2,7 +2,7 @@
 
 This repository lacks the Kokoro-82M Model, due to it's large size.
 
-- To get Kokoro, change directory into python-silvio, and use the command:
+- To get Kokoro, change directory into python-silvio, and use the following commands:
 - git clone https://huggingface.co/hexgrad/Kokoro-82M
 - cd Kokoro-82M
 - pip install -q phonemizer torch transformers scipy munch
