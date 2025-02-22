@@ -14,5 +14,5 @@ https://docs.google.com/presentation/d/1h3-J7XP6VjZQ1vxj3i6qkJU_03-BcNZkn96muNLd
 - Ekin Yurekli
 - Wesley Berg
 - Nia Xidos
-- Silvio
+- Silvio Tremblay
 - Shaun Ramsey
