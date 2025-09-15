@@ -8,8 +8,8 @@ This repository lacks the Kokoro-82M Model, due to it's large size.
 - cd Kokoro-82M
 - pip install -q phonemizer torch transformers scipy munch
 
-## Presentation Link
-https://docs.google.com/presentation/d/1h3-J7XP6VjZQ1vxj3i6qkJU_03-BcNZkn96muNLdriw/edit?usp=sharing
+## Demo Video
+[https://docs.google.com/presentation/d/1h3-J7XP6VjZQ1vxj3i6qkJU_03-BcNZkn96muNLdriw/edit?usp=sharing](https://www.youtube.com/watch?feature=shared&v=1pBWY5ndZpI)
 
 ## Contributors
 - Ekin Yurekli
